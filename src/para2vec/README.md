@@ -1,16 +1,15 @@
-# Text Classification - 
+# Paragrah to vector convertsion
 
 ## About / Synopsis
 
-* Text Classification for DBPedia
-* Create End to End development for Text classification.
+* Convert document into vector format
+* we are using [https://cs.stanford.edu/~quocle/paragraph_vector.pdf] for creation.
 * Project status: Development
 
 
 ## Folder Structure
 
 folder structure of 
-
 
 
 ## Installation
@@ -37,8 +36,8 @@ Description, sub-modules organization...
 ### Requirements
 
 Ite made over python3.5 for all dependent libraies please check requirement.txt
-### Limitations
 
+### Limitations
 
 
 ### Build
