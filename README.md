@@ -10,7 +10,7 @@
 ## About Data
 DBpedia (from "DB" for "database") is a data aiming to extract structured content from the information created in Wikipedia. This is an extract of the data that provides taxonomic, hierarchical categories ("classes") for 342,782 wikipedia articles. There are 3 levels L1, L2 and L3 with 9, 70 and 219 classes respectively.
 
-![sample image](https://github.com/Mahendra-Chouhan/hierarchy-text-classification/blob/master/data_sample.png)
+![sample image](https://github.com/Mahendra-Chouhan/hierarchy-text-classification/blob/master/images/data_sample.png)
 
 ## Folder Structure
 folder structure of 
@@ -18,7 +18,7 @@ folder structure of
 ## Flow Diagram
 
 
-![data Structure image](https://github.com/Mahendra-Chouhan/hierarchy-text-classification/blob/master/hirarchy_text_classification_flow.png)
+![data Structure image](https://github.com/Mahendra-Chouhan/hierarchy-text-classification/blob/master/images/hirarchy_text_classification_flow.png)
 
 
 
