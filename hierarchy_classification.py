@@ -8,7 +8,7 @@ Created on Wed Dec 18 04:26:39 2019
 import fire
 import json
 import logging
-import pandas
+import pandas as pd
 from tqdm import tqdm
 # all hierarchy classification import
 from src.doc_classification.classification_hierarchy import classification_hierarchy
@@ -24,73 +24,94 @@ logger = logging.getLogger(__name__)
 
 
 class hirarchy_classifiers(object):
-    def __init__(self, datapath, logger=None):
+    def __init__(self, datapath="data/DBPEDIA_train.csv", logger=None):
         self.logger = logger
-        self.create_hirarchy_structure(datapath)
+        self.datapath = datapath
+        self.create_hirarchy_structure()
     
     def get_network_detail(self):
         return self.classification_hierarchy_obj.network_details()
     
     def train_para2vec(self):
         build_model_obj = build_model()
-        build_model_obj.main(model_name="Third_model", 
-                         raw_data_path="src/raw_data",
+        build_model_obj.main(model_name="dbpedia_para2vec_model", 
+                         raw_data_path="data",
                          model_path = "src/para2vec/models",
-                         csv_file_name = "PEA_renamed_file_report.csv")
+                         csv_file_name = "DBPEDIA_train.csv")
     def __read__train_data(self, datapath):
         # return the data 
-        pass
+        return pd.read_csv(datapath)
     
-    def create_hirarchy_structure(self, datapath):
+    def __get_label_structure(self, train_df):
+        groupse = train_df.groupby(["l1", "l2", "l3"])
+        all_groups = groupse.groups.keys()
+        final_dict = {}
+        for group in all_groups:
+            l1, l2, l3 = group
+            if l1 in final_dict:
+                if l2 in final_dict[l1]:
+                    final_dict[l1][l2].append(l3)
+                if l2 not in final_dict[l1]:
+                    final_dict[l1][l2] = [l3]
+            if l1 not in final_dict:
+                final_dict[l1] = {l2:[l3]}
+        return final_dict
+
+    def create_hirarchy_structure(self):
         # all classification objects
+        datapath = self.datapath
         l1_obj = l1_classification(self.logger)
         l2_obj = l2_classification(self.logger)
         l3_obj = l3_classification(self.logger)
         # all classification details
-        train_data = self.__read__train_data(datapath)
-        # group by L1 
+        train_data_df = self.__read__train_data(datapath)
+        classes_structure = self.__get_label_structure(train_data_df)
+        model_path = "src/doc_classification/models"
         
-        # group by L2
-        
-        # group by l3
-        
-        basic_details = pea_basic_obj.get_classifier_default_details()
-        other_details = pea_other_obj.get_classifier_default_details()
-        main_details = main_clf_obj.get_classifier_default_details()
-        support_doc_details = support_doc_obj.get_classifier_default_details()
-        # creating Hirarchy structure.
-        l1_obj["is_root"] = True
-        # add model object into structure
-        main_details["model_object"] = main_clf_obj
-        support_doc_details["model_object"] = support_doc_obj
-        basic_details["model_object"] = pea_basic_obj
-        other_details["model_object"] = pea_other_obj
-        # main sub classifiers
-        main_sub_classifiers_support = {"model_name": support_doc_details["model_name"],
-         "version": support_doc_details["version"]}
-        main_sub_classifiers_basic = {"model_name": basic_details["model_name"],
-         "version": basic_details["version"]}
-        main_details["child"]["sub_classifiers"].append(main_sub_classifiers_support)
-        main_details["child"]["sub_classifiers"].append(main_sub_classifiers_basic)
-        # pea basic sub classifiers
-        basic_sub_classifier = {"model_name": other_details["model_name"],
-         "version": other_details["version"]}
-        basic_details["child"]["sub_classifiers"].append(basic_sub_classifier)
-        # creating Hirarchy structure.
+        l1_details = l1_obj.get_classifier_default_details(model_name="L1", 
+                                                           model_path=model_path,
+                                                           version=0.01)
+        l1_details["is_root"] = True
+        l1_details["model_object"] = l1_obj
         hierarchy_strct = []
-        hierarchy_strct.append(main_details)
-        hierarchy_strct.append(support_doc_details)
-        hierarchy_strct.append(basic_details)
-        hierarchy_strct.append(other_details)
-
+        single_lables_count = 0
+        for l1, l2_structure in classes_structure.items():
+            L2_model_name = "L2_{}".format(l1)
+            l2_details = l2_obj.get_classifier_default_details(model_name=L2_model_name, 
+                                                           model_path=model_path,
+                                                           version=0.01)
+            # L2 sub classifiers
+            l2_details["model_object"] = l2_obj
+            l2_detail_sub_cls = {"model_name": l2_details["model_name"],
+                                 "version": l2_details["version"]}
+            l1_details["child"]["sub_classifiers"].append(l2_detail_sub_cls)
+            for l2, l3_lables in l2_structure.items():
+                if len(l3_lables) == 1:
+                    single_lables_count += 1
+                    l2_details["child"]["lables"].extend(l3_lables)
+                if len(l3_lables) > 1:
+                    L3_model_name = "L3_{}".format(l2)
+                    l3_details = l3_obj.get_classifier_default_details(model_name=L3_model_name, 
+                                                               model_path=model_path,
+                                                               version=0.01)
+                    l3_details["model_object"] = l3_obj
+                    l3_detail_sub_cls = {"model_name": l3_details["model_name"],
+                                     "version": l3_details["version"]}
+                    l2_details["child"]["sub_classifiers"].append(l3_detail_sub_cls)
+                    l3_details["child"]["lables"].extend(l3_lables)
+                    hierarchy_strct.append(l3_details)
+            hierarchy_strct.append(l2_details)
+        hierarchy_strct.append(l1_details)
+        
         self.classification_hierarchy_obj = classification_hierarchy(self.logger)
         self.classification_hierarchy_obj.create_graph(hierarchy_strct)
         network_detail = self.classification_hierarchy_obj.network_details()
-        print(self.logger)
-        logger.info(json.dumps(network_detail, indent=2))
-#        self.classification_hierarchy_obj.save_graph("hirarchy_structure.png")
-        
-    
+        # logger.info(json.dumps(network_detail, indent=2))
+        print("total one lable classes {}".format(single_lables_count))
+        with open("structure_json", 'w+') as f:
+            json.dump(network_detail, f, indent=2)
+        self.classification_hierarchy_obj.save_graph("hirarchy_structure.png")
+
     def train_model(self, model_name, model_version):
         self.classification_hierarchy_obj.train_model(model_name,
                                                       model_version)
@@ -117,11 +138,14 @@ class hirarchy_classifiers(object):
                                                   doc_id)
     def predict_all(self):
         # predict all the records in csv
-        csv_path = "src/raw_data"
-        csv_name = "PEA_renamed_file_report.csv"
-        all_data_df = pandas.read_csv(csv_path+"/"+csv_name)
+        csv_path = "data"
+        csv_name = "DBPEDIA_test.csv"
+        all_data_df = pd.read_csv(csv_path+"/"+csv_name)
         total_file = 0
         total_correct = 0
+        l1_correct = 0
+        l2_correct = 0
+        l3_correct = 0
 #        size = 100#len(all_data_df)
 #        x_vec = np.linspace(0,1,size+1)[0:-1]
 #        y_vec = np.zeros(len(x_vec))
@@ -132,11 +156,15 @@ class hirarchy_classifiers(object):
             for index, row in filtered_df.iterrows():
                 pbar.update(1)
                 total_file += 1
-                prediction = self.prediction(row['file_path'])
-                logger.info("Predicted  is {} and real is {}".format(prediction,
-                             row['file_type']))
-                if prediction == row['file_type']:
-                    total_correct += 1
+                all_predictions = self.prediction(row['text'])
+                logger.info("Predicted are:{} and real are {}, {}, {}".format(str(all_predictions),
+                             row['l1'], row['l2'], row['l3']))
+                if all_predictions[0] == row['l1']:
+                    l1_correct += 1
+                if all_predictions[1] == row['l2']:
+                    l2_correct += 1
+                if all_predictions[2] == row['l3']:
+                    l3_correct += 1                    
                 total_accuracy = total_correct / total_file
 #                y_vec[-1] = total_accuracy
 #                line1 = live_plotter(x_vec,y_vec,line1)
@@ -145,39 +173,6 @@ class hirarchy_classifiers(object):
                             total_accuracy))
         final_accuracy = total_correct / total_file
         print("Final Accuracy is{}".format(final_accuracy))
-
-
-
-import matplotlib.pyplot as plt
-import numpy as np
-
-# use ggplot style for more sophisticated visuals
-plt.style.use('ggplot')
-
-def live_plotter(x_vec,y1_data,line1,identifier='',pause_time=0.001):
-    if line1==[]:
-        # this is the call to matplotlib that allows dynamic plotting
-        plt.ion()
-        fig = plt.figure(figsize=(13,6))
-        ax = fig.add_subplot(111)
-        # create a variable for the line so we can later update it
-        line1, = ax.plot(x_vec,y1_data,'-o',alpha=0.8)        
-        #update plot label/title
-        plt.ylabel('Y Label')
-        plt.title('Title: {}'.format(identifier))
-        plt.show()
-    # after the figure, axis, and line are created, we only need to update the y-data
-    line1.set_ydata(y1_data)
-    # adjust limits if new data goes beyond bounds
-    if np.min(y1_data)<=line1.axes.get_ylim()[0] or np.max(y1_data)>=line1.axes.get_ylim()[1]:
-        plt.ylim([np.min(y1_data)-np.std(y1_data),np.max(y1_data)+np.std(y1_data)])
-    # this pauses the data so the figure/axis can catch up - the amount of pause can be altered above
-    plt.pause(pause_time)
-    # return line so we can update it again in the next iteration
-    return line1
-
-
-
 
 
 if __name__ == "__main__":

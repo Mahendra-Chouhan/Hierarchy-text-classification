@@ -18,15 +18,17 @@ class l2_classification(text_classification):
     def __init__(self, logger=None):
         self.logger = logger or logging.getLogger(__name__)
 
-    def get_classifier_default_details(self):
+    def get_classifier_default_details(self, model_name, model_path, version):
         # retrun the classifier details
+        self.model_name = model_name
+        self.model_path = model_path
+        self.version = version
         classifier_details = text_classification.get_detault_detail(self)
-        classifier_details["model_name"] = "L2 Classifiers"
-        classifier_details["model_path"] = "src/doc_classification/models"
-        classifier_details["description"] = """This is L2 Classifiers"""
-        classifier_details["data_path"] = "src/raw_data"
-        classifier_details["data_file_name"] = ""
-        classifier_details["child"] = {"sub_classifiers":[],
+        classifier_details["model_name"] = self.model_name
+        classifier_details["model_path"] = self.model_path
+        classifier_details["version"] = self.version
+        classifier_details["description"] = """This is L2 Classifier"""
+        classifier_details["child"] = {"sub_classifiers": [],
                                        "lables": []}
         return classifier_details
 

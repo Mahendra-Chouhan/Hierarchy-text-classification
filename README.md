@@ -16,11 +16,14 @@ DBpedia (from "DB" for "database") is a data aiming to extract structured conten
 folder structure of 
 
 ## Flow Diagram
-Data Structure 
+
 
 ![data Structure image](https://github.com/Mahendra-Chouhan/hierarchy-text-classification/blob/master/hirarchy_text_classification_flow.png)
 
 
 
 ## Installation
-Ite made over python3.5 for all dependent libraies please check requirement.txt
+Its coded in python3.5 for all dependent libraies please check requirement.txt
+
+## Result
+Its coded in python3.5 for all dependent libraies please check requirement.txt

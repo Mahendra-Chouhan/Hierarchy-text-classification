@@ -39,10 +39,10 @@ class text_classification():
         classifier_details["creation_date"] = datetime.now().strftime("%H:%M:%S.%f - %b %d %Y")
         classifier_details["update_date"] = datetime.now().strftime("%H:%M:%S.%f - %b %d %Y")
         classifier_details["evaluation"] = None
-        classifier_details["data_path"] = "src/raw_data"
-        classifier_details["data_file_name"] = ""
+        classifier_details["data_path"] = "data"
+        classifier_details["data_file_name"] = "DBPEDIA_train.csv"
         other_dict = {"para2Vec_path": "src/para2vec/models",
-                      "para2vec_file_name": "Third_model.pickle"}
+                      "para2vec_file_name": "dbpedia_para2vec_model.pickle"}
         classifier_details["other_details"] = other_dict
         classifier_details["child"] = {"sub_classifiers":[],
                                        "lables": []}
@@ -120,18 +120,16 @@ class text_classification():
         with tqdm(total=len(csv_df)) as pbar:
             for index, row in csv_df.iterrows():
                 pbar.update(1)
-                with open(raw_data_path+"/"+row['file_path'], "rb",
-                          encoding="windows-1252") as data:
-                    file_vector = modeL_prediction_obj.get_para_2_vector(
-                            data.read())
-                    all_para_2_vector.append(file_vector)
+                text = row['text']
+                file_vector = modeL_prediction_obj.get_para_2_vector(text)
+                all_para_2_vector.append(file_vector)
         csv_df['para_2_vec'] = all_para_2_vector
         # save_dataframe(csv_df, raw_data_path, "featured.csv")
         return csv_df
 
     def _filter_data(self, csv_dataframe):
         self.logger.info("Total Length of Data: {}".format(len(csv_dataframe)))
-        csv_df = csv_dataframe[csv_dataframe.file_type.isin(
+        csv_df = csv_dataframe[csv_dataframe.l3.isin(
                 self.approved_lables)]
         for mask, lables in self.masked_lables.items():
             csv_df = csv_df.replace(to_replace=lables, value=mask)

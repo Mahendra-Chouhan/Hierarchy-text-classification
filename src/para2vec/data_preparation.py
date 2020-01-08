@@ -41,11 +41,10 @@ class data_preparation(object):
         with tqdm(total=len(all_records)) as pbar:
             for index, row in all_records.iterrows():
                 pbar.update(1)
-                with open(raw_data_path+"/"+row['file_path'], "rb",
-                          encoding="windows-1252") as data:
-                    file_data = self._preprocess_data(data.read())
-                    all_data_text.append(TaggedDocument(words=file_data,
-                                                        tags=row['file_type']))
+                text = row['text']
+                tag = row['l3']
+                all_data_text.append(TaggedDocument(words=text,
+                                                    tags=tag))
         shuffle(all_data_text)
         self.logger.info("Data loading Completed")
         self.logger.info("total documents: {}".format(len(all_data_text)))

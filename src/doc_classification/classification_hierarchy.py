@@ -150,7 +150,7 @@ class classification_hierarchy():
                                                raw_data_path=node_details["data_path"])
         is_success, evaluation = model_obj.train_and_evaluation(csv_df,
                                                               feature_name="para_2_vec",
-                                                              lable_name="file_type")
+                                                              lable_name="l3")
         if is_success:
             searched_node_name = self.__get_node_name(model_name, version)
             self.classification_graph.nodes[searched_node_name]["update_date"] = datetime.now().strftime("%H:%M:%S.%f - %b %d %Y")
@@ -163,32 +163,35 @@ class classification_hierarchy():
         # get the hierarchy sturcture of document classifcation.
         pass
     
-    def prediction(self, file_id):
+    def prediction(self, raw_text):
         root_node = self.__find_root_node()
         root_details = self.get_node(root_node)
         model_name = root_details["model_name"]
         model_version = root_details["version"]
-        pridicted_lable = self.prediction_by_model(model_name, model_version, file_id)
+        all_precitions = []
+        pridicted_lable = self.prediction_by_model(model_name, model_version,
+                                                   raw_text)
         self.logger.info(pridicted_lable)
         node_details = self.get_node(pridicted_lable[0])
         self.logger.info(node_details)
+        all_precitions.append(pridicted_lable[0])
         while node_details != None:
             self.logger.info(node_details)
             model_name = node_details["model_name"]
             model_version = node_details["version"]
             pridicted_lable = self.prediction_by_model(model_name, 
-                                                       model_version, file_id)
+                                                       model_version, raw_text)
             self.logger.info(pridicted_lable)
+            all_precitions.append(pridicted_lable[0])
             node_details = self.get_node(pridicted_lable[0])
-        return pridicted_lable[0]    
+        return all_precitions    
     
-    def prediction_by_model(self, model_name, version, file_id,
+    def prediction_by_model(self, model_name, version, raw_text,
                             raw_data_path=None):
         model_node_name = self.__get_node_name(model_name, version)
         node_details = self.get_node(model_node_name)
-        with open(node_details["data_path"]+"/"+file_id, "rb",
-                          encoding="windows-1252") as data:
-            raw_text = data.read()
+        
+        
         model_obj = node_details["model_object"]
         para_2_vec = model_obj.embedding(para2vec_model_name=node_details["other_details"]["para2vec_file_name"],
                                                para2vec_model_path=node_details["other_details"]["para2Vec_path"],
@@ -198,5 +201,3 @@ class classification_hierarchy():
                                node_details["version"])
         predicted_lable = model_obj.predict_label(para_2_vec.reshape(1, -1))
         return predicted_lable
-        # check the pridiction has some sub classificaiton. if yes 
-        # Call that sub -classifier else return the result.

@@ -18,7 +18,7 @@ class build_model(object):
 
     def define_model(self, model_name):
         self.model = Doc2Vec(dm=0, vector_size=100, negative=5, hs=0,
-                             min_count=2, sample=0, epochs=20,
+                             min_count=2, sample=0, epochs=2,
                              workers=self.cores)
         self.model_name = model_name
 

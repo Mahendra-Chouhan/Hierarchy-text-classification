@@ -15,20 +15,20 @@ from sklearn.metrics import accuracy_score
 
 
 class l1_classification(text_classification):
-    def __init__(self, model_name, model_path, version, logger=None):
+    def __init__(self, logger=None):
+        self.logger = logger or logging.getLogger(__name__)
+
+    def get_classifier_default_details(self, model_name, model_path, version):
+        # retrun the classifier details
         self.model_name = model_name
         self.model_path = model_path
         self.version = version
-        self.logger = logger or logging.getLogger(__name__)
-
-    def get_classifier_default_details(self):
-        # retrun the classifier details
         classifier_details = text_classification.get_detault_detail(self)
-        classifier_details["model_name"] = "main_classifier"
-        classifier_details["model_path"] = "src/doc_classification/models"
-        classifier_details["version"] = 0.00
+        classifier_details["model_name"] = self.model_name
+        classifier_details["model_path"] = self.model_path
+        classifier_details["version"] = self.version
         classifier_details["description"] = """This is L1 Classifier"""
-        classifier_details["child"] = {"sub_classifiers":[],
+        classifier_details["child"] = {"sub_classifiers": [],
                                        "lables": []}
         return classifier_details
 
