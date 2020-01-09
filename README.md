@@ -13,7 +13,7 @@ DBpedia (from "DB" for "database") is a data aiming to extract structured conten
 ![sample image](https://github.com/Mahendra-Chouhan/hierarchy-text-classification/blob/master/images/data_sample.png)
 
 ## Folder Structure
-folder structure of 
+folder structure of project.
 
 ## Flow Diagram
 
@@ -26,4 +26,10 @@ folder structure of
 Its coded in python3.5 for all dependent libraies please check requirement.txt
 
 ## Result
-Its coded in python3.5 for all dependent libraies please check requirement.txt
+The Exepriment is performed on Test file.
+Model we used is logistic regression for all levels.
+
+| Model Used          | Total Test Documents | L1 Correct | L2 Correct | L3 Correct  | Total Accuracy |
+|---------------------|----------------------|------------|------------|-------------|----------------|
+| Logistic Regression | 60794                | 32731       | 10618       | 3879        | 6.38 %         |
+

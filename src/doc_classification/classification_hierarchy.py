@@ -156,13 +156,6 @@ class classification_hierarchy():
             self.classification_graph.nodes[searched_node_name]["update_date"] = datetime.now().strftime("%H:%M:%S.%f - %b %d %Y")
             self.classification_graph.nodes[searched_node_name]["evaluation"] = evaluation
 
-    def load_all_models(self, connected_only=True):
-        hierarchy_structure = self.get_hierarchy_structure()
-
-    def get_hierarchy_structure(self):
-        # get the hierarchy sturcture of document classifcation.
-        pass
-    
     def prediction(self, raw_text):
         root_node = self.__find_root_node()
         root_details = self.get_node(root_node)
@@ -173,10 +166,10 @@ class classification_hierarchy():
                                                    raw_text)
         self.logger.info(pridicted_lable)
         node_details = self.get_node(pridicted_lable[0])
-        self.logger.info(node_details)
+        #self.logger.info(node_details)
         all_precitions.append(pridicted_lable[0])
         while node_details != None:
-            self.logger.info(node_details)
+            self.logger.debug(node_details)
             model_name = node_details["model_name"]
             model_version = node_details["version"]
             pridicted_lable = self.prediction_by_model(model_name, 

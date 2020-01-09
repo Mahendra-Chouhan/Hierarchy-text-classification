@@ -1,0 +1,1451 @@
+[
+  {
+    "model_name": "L3_Actor",
+    "model_uuid": 211553088942473350885892667947469644895,
+    "model_path": "src/doc_classification/models",
+    "model_object": null,
+    "is_default": true,
+    "is_root": false,
+    "version": 0.01,
+    "description": "This is L3 Classifier",
+    "creation_date": "03:14:06.609060 - Jan 10 2020",
+    "update_date": "03:14:06.609065 - Jan 10 2020",
+    "evaluation": null,
+    "data_path": "data",
+    "data_file_name": "DBPEDIA_train.csv",
+    "other_details": {
+      "para2Vec_path": "src/para2vec/models",
+      "para2vec_file_name": "dbpedia_para2vec_model.pickle"
+    },
+    "child": {
+      "sub_classifiers": [],
+      "lables": [
+        "AdultActor",
+        "VoiceActor"
+      ]
+    }
+  },
+  {
+    "model_name": "L3_Artist",
+    "model_uuid": 195435280352990399450668477911091823461,
+    "model_path": "src/doc_classification/models",
+    "model_object": null,
+    "is_default": true,
+    "is_root": false,
+    "version": 0.01,
+    "description": "This is L3 Classifier",
+    "creation_date": "03:14:06.609080 - Jan 10 2020",
+    "update_date": "03:14:06.609085 - Jan 10 2020",
+    "evaluation": null,
+    "data_path": "data",
+    "data_file_name": "DBPEDIA_train.csv",
+    "other_details": {
+      "para2Vec_path": "src/para2vec/models",
+      "para2vec_file_name": "dbpedia_para2vec_model.pickle"
+    },
+    "child": {
+      "sub_classifiers": [],
+      "lables": [
+        "Comedian",
+        "ComicsCreator",
+        "FashionDesigner",
+        "Painter",
+        "Photographer"
+      ]
+    }
+  },
+  {
+    "model_name": "L3_Athlete",
+    "model_uuid": 33089475105883965773425250941221345038,
+    "model_path": "src/doc_classification/models",
+    "model_object": null,
+    "is_default": true,
+    "is_root": false,
+    "version": 0.01,
+    "description": "This is L3 Classifier",
+    "creation_date": "03:14:06.609097 - Jan 10 2020",
+    "update_date": "03:14:06.609102 - Jan 10 2020",
+    "evaluation": null,
+    "data_path": "data",
+    "data_file_name": "DBPEDIA_train.csv",
+    "other_details": {
+      "para2Vec_path": "src/para2vec/models",
+      "para2vec_file_name": "dbpedia_para2vec_model.pickle"
+    },
+    "child": {
+      "sub_classifiers": [],
+      "lables": [
+        "AustralianRulesFootballPlayer",
+        "BadmintonPlayer",
+        "BaseballPlayer",
+        "BasketballPlayer",
+        "Bodybuilder",
+        "Canoeist",
+        "ChessPlayer",
+        "Cricketer",
+        "Cyclist",
+        "DartsPlayer",
+        "GaelicGamesPlayer",
+        "GolfPlayer",
+        "Gymnast",
+        "HandballPlayer",
+        "HorseRider",
+        "Jockey",
+        "LacrossePlayer",
+        "MartialArtist",
+        "NetballPlayer",
+        "PokerPlayer",
+        "Rower",
+        "RugbyPlayer",
+        "SoccerPlayer",
+        "SquashPlayer",
+        "Swimmer",
+        "TableTennisPlayer",
+        "TennisPlayer"
+      ]
+    }
+  },
+  {
+    "model_name": "L3_Broadcaster",
+    "model_uuid": 174091031673649915538113013741194019962,
+    "model_path": "src/doc_classification/models",
+    "model_object": null,
+    "is_default": true,
+    "is_root": false,
+    "version": 0.01,
+    "description": "This is L3 Classifier",
+    "creation_date": "03:14:06.609116 - Jan 10 2020",
+    "update_date": "03:14:06.609120 - Jan 10 2020",
+    "evaluation": null,
+    "data_path": "data",
+    "data_file_name": "DBPEDIA_train.csv",
+    "other_details": {
+      "para2Vec_path": "src/para2vec/models",
+      "para2vec_file_name": "dbpedia_para2vec_model.pickle"
+    },
+    "child": {
+      "sub_classifiers": [],
+      "lables": [
+        "BroadcastNetwork",
+        "RadioStation",
+        "TelevisionStation"
+      ]
+    }
+  },
+  {
+    "model_name": "L3_Cleric",
+    "model_uuid": 125635352565788211973251239450346510110,
+    "model_path": "src/doc_classification/models",
+    "model_object": null,
+    "is_default": true,
+    "is_root": false,
+    "version": 0.01,
+    "description": "This is L3 Classifier",
+    "creation_date": "03:14:06.609132 - Jan 10 2020",
+    "update_date": "03:14:06.609137 - Jan 10 2020",
+    "evaluation": null,
+    "data_path": "data",
+    "data_file_name": "DBPEDIA_train.csv",
+    "other_details": {
+      "para2Vec_path": "src/para2vec/models",
+      "para2vec_file_name": "dbpedia_para2vec_model.pickle"
+    },
+    "child": {
+      "sub_classifiers": [],
+      "lables": [
+        "Cardinal",
+        "ChristianBishop",
+        "Pope",
+        "Saint"
+      ]
+    }
+  },
+  {
+    "model_name": "L3_Company",
+    "model_uuid": 227844036069193132164843080609404506169,
+    "model_path": "src/doc_classification/models",
+    "model_object": null,
+    "is_default": true,
+    "is_root": false,
+    "version": 0.01,
+    "description": "This is L3 Classifier",
+    "creation_date": "03:14:06.609196 - Jan 10 2020",
+    "update_date": "03:14:06.609220 - Jan 10 2020",
+    "evaluation": null,
+    "data_path": "data",
+    "data_file_name": "DBPEDIA_train.csv",
+    "other_details": {
+      "para2Vec_path": "src/para2vec/models",
+      "para2vec_file_name": "dbpedia_para2vec_model.pickle"
+    },
+    "child": {
+      "sub_classifiers": [],
+      "lables": [
+        "Airline",
+        "Bank",
+        "Brewery",
+        "BusCompany",
+        "LawFirm",
+        "Publisher",
+        "RecordLabel",
+        "Winery"
+      ]
+    }
+  },
+  {
+    "model_name": "L3_EducationalInstitution",
+    "model_uuid": 55714244207347056425063903714396991648,
+    "model_path": "src/doc_classification/models",
+    "model_object": null,
+    "is_default": true,
+    "is_root": false,
+    "version": 0.01,
+    "description": "This is L3 Classifier",
+    "creation_date": "03:14:06.609251 - Jan 10 2020",
+    "update_date": "03:14:06.609256 - Jan 10 2020",
+    "evaluation": null,
+    "data_path": "data",
+    "data_file_name": "DBPEDIA_train.csv",
+    "other_details": {
+      "para2Vec_path": "src/para2vec/models",
+      "para2vec_file_name": "dbpedia_para2vec_model.pickle"
+    },
+    "child": {
+      "sub_classifiers": [],
+      "lables": [
+        "Library",
+        "School",
+        "University"
+      ]
+    }
+  },
+  {
+    "model_name": "L3_FictionalCharacter",
+    "model_uuid": 96161623869929674370650088778996206853,
+    "model_path": "src/doc_classification/models",
+    "model_object": null,
+    "is_default": true,
+    "is_root": false,
+    "version": 0.01,
+    "description": "This is L3 Classifier",
+    "creation_date": "03:14:06.609267 - Jan 10 2020",
+    "update_date": "03:14:06.609272 - Jan 10 2020",
+    "evaluation": null,
+    "data_path": "data",
+    "data_file_name": "DBPEDIA_train.csv",
+    "other_details": {
+      "para2Vec_path": "src/para2vec/models",
+      "para2vec_file_name": "dbpedia_para2vec_model.pickle"
+    },
+    "child": {
+      "sub_classifiers": [],
+      "lables": [
+        "MythologicalFigure",
+        "SoapCharacter"
+      ]
+    }
+  },
+  {
+    "model_name": "L3_Organisation",
+    "model_uuid": 104885967106444251209443434281434856569,
+    "model_path": "src/doc_classification/models",
+    "model_object": null,
+    "is_default": true,
+    "is_root": false,
+    "version": 0.01,
+    "description": "This is L3 Classifier",
+    "creation_date": "03:14:06.609285 - Jan 10 2020",
+    "update_date": "03:14:06.609289 - Jan 10 2020",
+    "evaluation": null,
+    "data_path": "data",
+    "data_file_name": "DBPEDIA_train.csv",
+    "other_details": {
+      "para2Vec_path": "src/para2vec/models",
+      "para2vec_file_name": "dbpedia_para2vec_model.pickle"
+    },
+    "child": {
+      "sub_classifiers": [],
+      "lables": [
+        "Legislature",
+        "MilitaryUnit",
+        "PoliticalParty",
+        "PublicTransitSystem",
+        "TradeUnion"
+      ]
+    }
+  },
+  {
+    "model_name": "L3_Person",
+    "model_uuid": 43827216181723833537817961003371553194,
+    "model_path": "src/doc_classification/models",
+    "model_object": null,
+    "is_default": true,
+    "is_root": false,
+    "version": 0.01,
+    "description": "This is L3 Classifier",
+    "creation_date": "03:14:06.609301 - Jan 10 2020",
+    "update_date": "03:14:06.609306 - Jan 10 2020",
+    "evaluation": null,
+    "data_path": "data",
+    "data_file_name": "DBPEDIA_train.csv",
+    "other_details": {
+      "para2Vec_path": "src/para2vec/models",
+      "para2vec_file_name": "dbpedia_para2vec_model.pickle"
+    },
+    "child": {
+      "sub_classifiers": [],
+      "lables": [
+        "Ambassador",
+        "Architect",
+        "Astronaut",
+        "BeautyQueen",
+        "BusinessPerson",
+        "Chef",
+        "Economist",
+        "Engineer",
+        "HorseTrainer",
+        "Journalist",
+        "Judge",
+        "MilitaryPerson",
+        "Model",
+        "Monarch",
+        "Noble",
+        "OfficeHolder",
+        "Philosopher",
+        "PlayboyPlaymate",
+        "Religious"
+      ]
+    }
+  },
+  {
+    "model_name": "L3_Politician",
+    "model_uuid": 265704935758009613160208461831982967591,
+    "model_path": "src/doc_classification/models",
+    "model_object": null,
+    "is_default": true,
+    "is_root": false,
+    "version": 0.01,
+    "description": "This is L3 Classifier",
+    "creation_date": "03:14:06.609317 - Jan 10 2020",
+    "update_date": "03:14:06.609321 - Jan 10 2020",
+    "evaluation": null,
+    "data_path": "data",
+    "data_file_name": "DBPEDIA_train.csv",
+    "other_details": {
+      "para2Vec_path": "src/para2vec/models",
+      "para2vec_file_name": "dbpedia_para2vec_model.pickle"
+    },
+    "child": {
+      "sub_classifiers": [],
+      "lables": [
+        "Congressman",
+        "Governor",
+        "Mayor",
+        "MemberOfParliament",
+        "President",
+        "PrimeMinister",
+        "Senator"
+      ]
+    }
+  },
+  {
+    "model_name": "L3_RacingDriver",
+    "model_uuid": 170627547026985323053337950531566916629,
+    "model_path": "src/doc_classification/models",
+    "model_object": null,
+    "is_default": true,
+    "is_root": false,
+    "version": 0.01,
+    "description": "This is L3 Classifier",
+    "creation_date": "03:14:06.609332 - Jan 10 2020",
+    "update_date": "03:14:06.609337 - Jan 10 2020",
+    "evaluation": null,
+    "data_path": "data",
+    "data_file_name": "DBPEDIA_train.csv",
+    "other_details": {
+      "para2Vec_path": "src/para2vec/models",
+      "para2vec_file_name": "dbpedia_para2vec_model.pickle"
+    },
+    "child": {
+      "sub_classifiers": [],
+      "lables": [
+        "FormulaOneRacer",
+        "NascarDriver"
+      ]
+    }
+  },
+  {
+    "model_name": "L3_Scientist",
+    "model_uuid": 314576037888678178632839155024693974381,
+    "model_path": "src/doc_classification/models",
+    "model_object": null,
+    "is_default": true,
+    "is_root": false,
+    "version": 0.01,
+    "description": "This is L3 Classifier",
+    "creation_date": "03:14:06.609348 - Jan 10 2020",
+    "update_date": "03:14:06.609352 - Jan 10 2020",
+    "evaluation": null,
+    "data_path": "data",
+    "data_file_name": "DBPEDIA_train.csv",
+    "other_details": {
+      "para2Vec_path": "src/para2vec/models",
+      "para2vec_file_name": "dbpedia_para2vec_model.pickle"
+    },
+    "child": {
+      "sub_classifiers": [],
+      "lables": [
+        "Entomologist",
+        "Medician"
+      ]
+    }
+  },
+  {
+    "model_name": "L3_SportsLeague",
+    "model_uuid": 3635079541722807669839673317568633336,
+    "model_path": "src/doc_classification/models",
+    "model_object": null,
+    "is_default": true,
+    "is_root": false,
+    "version": 0.01,
+    "description": "This is L3 Classifier",
+    "creation_date": "03:14:06.609363 - Jan 10 2020",
+    "update_date": "03:14:06.609367 - Jan 10 2020",
+    "evaluation": null,
+    "data_path": "data",
+    "data_file_name": "DBPEDIA_train.csv",
+    "other_details": {
+      "para2Vec_path": "src/para2vec/models",
+      "para2vec_file_name": "dbpedia_para2vec_model.pickle"
+    },
+    "child": {
+      "sub_classifiers": [],
+      "lables": [
+        "BaseballLeague",
+        "BasketballLeague",
+        "IceHockeyLeague",
+        "RugbyLeague",
+        "SoccerLeague"
+      ]
+    }
+  },
+  {
+    "model_name": "L3_SportsTeam",
+    "model_uuid": 278622238785123344624483255956880082932,
+    "model_path": "src/doc_classification/models",
+    "model_object": null,
+    "is_default": true,
+    "is_root": false,
+    "version": 0.01,
+    "description": "This is L3 Classifier",
+    "creation_date": "03:14:06.609379 - Jan 10 2020",
+    "update_date": "03:14:06.609383 - Jan 10 2020",
+    "evaluation": null,
+    "data_path": "data",
+    "data_file_name": "DBPEDIA_train.csv",
+    "other_details": {
+      "para2Vec_path": "src/para2vec/models",
+      "para2vec_file_name": "dbpedia_para2vec_model.pickle"
+    },
+    "child": {
+      "sub_classifiers": [],
+      "lables": [
+        "AustralianFootballTeam",
+        "BasketballTeam",
+        "CanadianFootballTeam",
+        "CricketTeam",
+        "CyclingTeam",
+        "HandballTeam",
+        "HockeyTeam",
+        "RugbyClub"
+      ]
+    }
+  },
+  {
+    "model_name": "L3_WinterSportPlayer",
+    "model_uuid": 204190034781112001505204910738477527989,
+    "model_path": "src/doc_classification/models",
+    "model_object": null,
+    "is_default": true,
+    "is_root": false,
+    "version": 0.01,
+    "description": "This is L3 Classifier",
+    "creation_date": "03:14:06.609394 - Jan 10 2020",
+    "update_date": "03:14:06.609398 - Jan 10 2020",
+    "evaluation": null,
+    "data_path": "data",
+    "data_file_name": "DBPEDIA_train.csv",
+    "other_details": {
+      "para2Vec_path": "src/para2vec/models",
+      "para2vec_file_name": "dbpedia_para2vec_model.pickle"
+    },
+    "child": {
+      "sub_classifiers": [],
+      "lables": [
+        "Curler",
+        "FigureSkater",
+        "IceHockeyPlayer",
+        "Skater",
+        "Skier"
+      ]
+    }
+  },
+  {
+    "model_name": "L3_Writer",
+    "model_uuid": 67393512279409917783995790114955846172,
+    "model_path": "src/doc_classification/models",
+    "model_object": null,
+    "is_default": true,
+    "is_root": false,
+    "version": 0.01,
+    "description": "This is L3 Classifier",
+    "creation_date": "03:14:06.609410 - Jan 10 2020",
+    "update_date": "03:14:06.609414 - Jan 10 2020",
+    "evaluation": null,
+    "data_path": "data",
+    "data_file_name": "DBPEDIA_train.csv",
+    "other_details": {
+      "para2Vec_path": "src/para2vec/models",
+      "para2vec_file_name": "dbpedia_para2vec_model.pickle"
+    },
+    "child": {
+      "sub_classifiers": [],
+      "lables": [
+        "Historian",
+        "Poet",
+        "ScreenWriter"
+      ]
+    }
+  },
+  {
+    "model_name": "L2_Agent",
+    "model_uuid": 278811861404125396242505489164655463778,
+    "model_path": "src/doc_classification/models",
+    "model_object": null,
+    "is_default": true,
+    "is_root": false,
+    "version": 0.01,
+    "description": "This is L2 Classifier",
+    "creation_date": "03:14:06.609037 - Jan 10 2020",
+    "update_date": "03:14:06.609043 - Jan 10 2020",
+    "evaluation": null,
+    "data_path": "data",
+    "data_file_name": "DBPEDIA_train.csv",
+    "other_details": {
+      "para2Vec_path": "src/para2vec/models",
+      "para2vec_file_name": "dbpedia_para2vec_model.pickle"
+    },
+    "child": {
+      "sub_classifiers": [
+        {
+          "model_name": "L3_Actor",
+          "version": 0.01
+        },
+        {
+          "model_name": "L3_Artist",
+          "version": 0.01
+        },
+        {
+          "model_name": "L3_Athlete",
+          "version": 0.01
+        },
+        {
+          "model_name": "L3_Broadcaster",
+          "version": 0.01
+        },
+        {
+          "model_name": "L3_Cleric",
+          "version": 0.01
+        },
+        {
+          "model_name": "L3_Company",
+          "version": 0.01
+        },
+        {
+          "model_name": "L3_EducationalInstitution",
+          "version": 0.01
+        },
+        {
+          "model_name": "L3_FictionalCharacter",
+          "version": 0.01
+        },
+        {
+          "model_name": "L3_Organisation",
+          "version": 0.01
+        },
+        {
+          "model_name": "L3_Person",
+          "version": 0.01
+        },
+        {
+          "model_name": "L3_Politician",
+          "version": 0.01
+        },
+        {
+          "model_name": "L3_RacingDriver",
+          "version": 0.01
+        },
+        {
+          "model_name": "L3_Scientist",
+          "version": 0.01
+        },
+        {
+          "model_name": "L3_SportsLeague",
+          "version": 0.01
+        },
+        {
+          "model_name": "L3_SportsTeam",
+          "version": 0.01
+        },
+        {
+          "model_name": "L3_WinterSportPlayer",
+          "version": 0.01
+        },
+        {
+          "model_name": "L3_Writer",
+          "version": 0.01
+        }
+      ],
+      "lables": [
+        "AmateurBoxer",
+        "Baronet",
+        "CollegeCoach",
+        "AnimangaCharacter",
+        "AmericanFootballPlayer",
+        "Band",
+        "SpeedwayRider",
+        "ClassicalMusicArtist",
+        "SportsTeamMember",
+        "RadioHost",
+        "SoccerManager",
+        "BeachVolleyballPlayer",
+        "SumoWrestler"
+      ]
+    }
+  },
+  {
+    "model_name": "L3_NaturalEvent",
+    "model_uuid": 165670974496872829144993089531350028807,
+    "model_path": "src/doc_classification/models",
+    "model_object": null,
+    "is_default": true,
+    "is_root": false,
+    "version": 0.01,
+    "description": "This is L3 Classifier",
+    "creation_date": "03:14:06.609462 - Jan 10 2020",
+    "update_date": "03:14:06.609466 - Jan 10 2020",
+    "evaluation": null,
+    "data_path": "data",
+    "data_file_name": "DBPEDIA_train.csv",
+    "other_details": {
+      "para2Vec_path": "src/para2vec/models",
+      "para2vec_file_name": "dbpedia_para2vec_model.pickle"
+    },
+    "child": {
+      "sub_classifiers": [],
+      "lables": [
+        "Earthquake",
+        "SolarEclipse"
+      ]
+    }
+  },
+  {
+    "model_name": "L3_Race",
+    "model_uuid": 38391600344052382638281691489523591429,
+    "model_path": "src/doc_classification/models",
+    "model_object": null,
+    "is_default": true,
+    "is_root": false,
+    "version": 0.01,
+    "description": "This is L3 Classifier",
+    "creation_date": "03:14:06.609477 - Jan 10 2020",
+    "update_date": "03:14:06.609482 - Jan 10 2020",
+    "evaluation": null,
+    "data_path": "data",
+    "data_file_name": "DBPEDIA_train.csv",
+    "other_details": {
+      "para2Vec_path": "src/para2vec/models",
+      "para2vec_file_name": "dbpedia_para2vec_model.pickle"
+    },
+    "child": {
+      "sub_classifiers": [],
+      "lables": [
+        "CyclingRace",
+        "HorseRace"
+      ]
+    }
+  },
+  {
+    "model_name": "L3_SocietalEvent",
+    "model_uuid": 243089715084494668947671344696018345485,
+    "model_path": "src/doc_classification/models",
+    "model_object": null,
+    "is_default": true,
+    "is_root": false,
+    "version": 0.01,
+    "description": "This is L3 Classifier",
+    "creation_date": "03:14:06.609492 - Jan 10 2020",
+    "update_date": "03:14:06.609497 - Jan 10 2020",
+    "evaluation": null,
+    "data_path": "data",
+    "data_file_name": "DBPEDIA_train.csv",
+    "other_details": {
+      "para2Vec_path": "src/para2vec/models",
+      "para2vec_file_name": "dbpedia_para2vec_model.pickle"
+    },
+    "child": {
+      "sub_classifiers": [],
+      "lables": [
+        "Convention",
+        "Election",
+        "FilmFestival",
+        "MilitaryConflict",
+        "MusicFestival"
+      ]
+    }
+  },
+  {
+    "model_name": "L3_SportsEvent",
+    "model_uuid": 330896311010209510904883176897509500260,
+    "model_path": "src/doc_classification/models",
+    "model_object": null,
+    "is_default": true,
+    "is_root": false,
+    "version": 0.01,
+    "description": "This is L3 Classifier",
+    "creation_date": "03:14:06.609508 - Jan 10 2020",
+    "update_date": "03:14:06.609513 - Jan 10 2020",
+    "evaluation": null,
+    "data_path": "data",
+    "data_file_name": "DBPEDIA_train.csv",
+    "other_details": {
+      "para2Vec_path": "src/para2vec/models",
+      "para2vec_file_name": "dbpedia_para2vec_model.pickle"
+    },
+    "child": {
+      "sub_classifiers": [],
+      "lables": [
+        "FootballMatch",
+        "GrandPrix",
+        "MixedMartialArtsEvent",
+        "WrestlingEvent"
+      ]
+    }
+  },
+  {
+    "model_name": "L3_Tournament",
+    "model_uuid": 22049761794508951260417058037523840872,
+    "model_path": "src/doc_classification/models",
+    "model_object": null,
+    "is_default": true,
+    "is_root": false,
+    "version": 0.01,
+    "description": "This is L3 Classifier",
+    "creation_date": "03:14:06.609524 - Jan 10 2020",
+    "update_date": "03:14:06.609529 - Jan 10 2020",
+    "evaluation": null,
+    "data_path": "data",
+    "data_file_name": "DBPEDIA_train.csv",
+    "other_details": {
+      "para2Vec_path": "src/para2vec/models",
+      "para2vec_file_name": "dbpedia_para2vec_model.pickle"
+    },
+    "child": {
+      "sub_classifiers": [],
+      "lables": [
+        "GolfTournament",
+        "SoccerTournament",
+        "TennisTournament",
+        "WomensTennisAssociationTournament"
+      ]
+    }
+  },
+  {
+    "model_name": "L2_Event",
+    "model_uuid": 6297309117826256200623272324342575479,
+    "model_path": "src/doc_classification/models",
+    "model_object": null,
+    "is_default": true,
+    "is_root": false,
+    "version": 0.01,
+    "description": "This is L2 Classifier",
+    "creation_date": "03:14:06.609446 - Jan 10 2020",
+    "update_date": "03:14:06.609451 - Jan 10 2020",
+    "evaluation": null,
+    "data_path": "data",
+    "data_file_name": "DBPEDIA_train.csv",
+    "other_details": {
+      "para2Vec_path": "src/para2vec/models",
+      "para2vec_file_name": "dbpedia_para2vec_model.pickle"
+    },
+    "child": {
+      "sub_classifiers": [
+        {
+          "model_name": "L3_NaturalEvent",
+          "version": 0.01
+        },
+        {
+          "model_name": "L3_Race",
+          "version": 0.01
+        },
+        {
+          "model_name": "L3_SocietalEvent",
+          "version": 0.01
+        },
+        {
+          "model_name": "L3_SportsEvent",
+          "version": 0.01
+        },
+        {
+          "model_name": "L3_Tournament",
+          "version": 0.01
+        }
+      ],
+      "lables": [
+        "OlympicEvent"
+      ]
+    }
+  },
+  {
+    "model_name": "L3_Building",
+    "model_uuid": 215570058568838958197997606481340557523,
+    "model_path": "src/doc_classification/models",
+    "model_object": null,
+    "is_default": true,
+    "is_root": false,
+    "version": 0.01,
+    "description": "This is L3 Classifier",
+    "creation_date": "03:14:06.609556 - Jan 10 2020",
+    "update_date": "03:14:06.609561 - Jan 10 2020",
+    "evaluation": null,
+    "data_path": "data",
+    "data_file_name": "DBPEDIA_train.csv",
+    "other_details": {
+      "para2Vec_path": "src/para2vec/models",
+      "para2vec_file_name": "dbpedia_para2vec_model.pickle"
+    },
+    "child": {
+      "sub_classifiers": [],
+      "lables": [
+        "Castle",
+        "HistoricBuilding",
+        "Hospital",
+        "Hotel",
+        "Museum",
+        "Prison",
+        "Restaurant",
+        "ShoppingMall"
+      ]
+    }
+  },
+  {
+    "model_name": "L3_CelestialBody",
+    "model_uuid": 101911511261805747975287739959153333590,
+    "model_path": "src/doc_classification/models",
+    "model_object": null,
+    "is_default": true,
+    "is_root": false,
+    "version": 0.01,
+    "description": "This is L3 Classifier",
+    "creation_date": "03:14:06.609571 - Jan 10 2020",
+    "update_date": "03:14:06.609576 - Jan 10 2020",
+    "evaluation": null,
+    "data_path": "data",
+    "data_file_name": "DBPEDIA_train.csv",
+    "other_details": {
+      "para2Vec_path": "src/para2vec/models",
+      "para2vec_file_name": "dbpedia_para2vec_model.pickle"
+    },
+    "child": {
+      "sub_classifiers": [],
+      "lables": [
+        "Galaxy",
+        "Planet"
+      ]
+    }
+  },
+  {
+    "model_name": "L3_Infrastructure",
+    "model_uuid": 152374522405341302226403708487009136727,
+    "model_path": "src/doc_classification/models",
+    "model_object": null,
+    "is_default": true,
+    "is_root": false,
+    "version": 0.01,
+    "description": "This is L3 Classifier",
+    "creation_date": "03:14:06.609587 - Jan 10 2020",
+    "update_date": "03:14:06.609592 - Jan 10 2020",
+    "evaluation": null,
+    "data_path": "data",
+    "data_file_name": "DBPEDIA_train.csv",
+    "other_details": {
+      "para2Vec_path": "src/para2vec/models",
+      "para2vec_file_name": "dbpedia_para2vec_model.pickle"
+    },
+    "child": {
+      "sub_classifiers": [],
+      "lables": [
+        "Airport",
+        "Dam"
+      ]
+    }
+  },
+  {
+    "model_name": "L3_NaturalPlace",
+    "model_uuid": 222413571483721426480186886326188924405,
+    "model_path": "src/doc_classification/models",
+    "model_object": null,
+    "is_default": true,
+    "is_root": false,
+    "version": 0.01,
+    "description": "This is L3 Classifier",
+    "creation_date": "03:14:06.609603 - Jan 10 2020",
+    "update_date": "03:14:06.609607 - Jan 10 2020",
+    "evaluation": null,
+    "data_path": "data",
+    "data_file_name": "DBPEDIA_train.csv",
+    "other_details": {
+      "para2Vec_path": "src/para2vec/models",
+      "para2vec_file_name": "dbpedia_para2vec_model.pickle"
+    },
+    "child": {
+      "sub_classifiers": [],
+      "lables": [
+        "Cave",
+        "Glacier",
+        "Mountain",
+        "MountainPass",
+        "MountainRange",
+        "Volcano"
+      ]
+    }
+  },
+  {
+    "model_name": "L3_RouteOfTransportation",
+    "model_uuid": 84356890993555536405776929573033936464,
+    "model_path": "src/doc_classification/models",
+    "model_object": null,
+    "is_default": true,
+    "is_root": false,
+    "version": 0.01,
+    "description": "This is L3 Classifier",
+    "creation_date": "03:14:06.609618 - Jan 10 2020",
+    "update_date": "03:14:06.609623 - Jan 10 2020",
+    "evaluation": null,
+    "data_path": "data",
+    "data_file_name": "DBPEDIA_train.csv",
+    "other_details": {
+      "para2Vec_path": "src/para2vec/models",
+      "para2vec_file_name": "dbpedia_para2vec_model.pickle"
+    },
+    "child": {
+      "sub_classifiers": [],
+      "lables": [
+        "Bridge",
+        "RailwayLine",
+        "Road",
+        "RoadTunnel"
+      ]
+    }
+  },
+  {
+    "model_name": "L3_Settlement",
+    "model_uuid": 271658294659222198534151834419939380649,
+    "model_path": "src/doc_classification/models",
+    "model_object": null,
+    "is_default": true,
+    "is_root": false,
+    "version": 0.01,
+    "description": "This is L3 Classifier",
+    "creation_date": "03:14:06.609634 - Jan 10 2020",
+    "update_date": "03:14:06.609639 - Jan 10 2020",
+    "evaluation": null,
+    "data_path": "data",
+    "data_file_name": "DBPEDIA_train.csv",
+    "other_details": {
+      "para2Vec_path": "src/para2vec/models",
+      "para2vec_file_name": "dbpedia_para2vec_model.pickle"
+    },
+    "child": {
+      "sub_classifiers": [],
+      "lables": [
+        "Town",
+        "Village"
+      ]
+    }
+  },
+  {
+    "model_name": "L3_SportFacility",
+    "model_uuid": 180535407309722103129139439485768978933,
+    "model_path": "src/doc_classification/models",
+    "model_object": null,
+    "is_default": true,
+    "is_root": false,
+    "version": 0.01,
+    "description": "This is L3 Classifier",
+    "creation_date": "03:14:06.609649 - Jan 10 2020",
+    "update_date": "03:14:06.609654 - Jan 10 2020",
+    "evaluation": null,
+    "data_path": "data",
+    "data_file_name": "DBPEDIA_train.csv",
+    "other_details": {
+      "para2Vec_path": "src/para2vec/models",
+      "para2vec_file_name": "dbpedia_para2vec_model.pickle"
+    },
+    "child": {
+      "sub_classifiers": [],
+      "lables": [
+        "CricketGround",
+        "GolfCourse",
+        "Stadium"
+      ]
+    }
+  },
+  {
+    "model_name": "L3_Stream",
+    "model_uuid": 86718899849728717423743978152316870575,
+    "model_path": "src/doc_classification/models",
+    "model_object": null,
+    "is_default": true,
+    "is_root": false,
+    "version": 0.01,
+    "description": "This is L3 Classifier",
+    "creation_date": "03:14:06.609665 - Jan 10 2020",
+    "update_date": "03:14:06.609670 - Jan 10 2020",
+    "evaluation": null,
+    "data_path": "data",
+    "data_file_name": "DBPEDIA_train.csv",
+    "other_details": {
+      "para2Vec_path": "src/para2vec/models",
+      "para2vec_file_name": "dbpedia_para2vec_model.pickle"
+    },
+    "child": {
+      "sub_classifiers": [],
+      "lables": [
+        "Canal",
+        "River"
+      ]
+    }
+  },
+  {
+    "model_name": "L2_Place",
+    "model_uuid": 106661507684234126153125122844764437391,
+    "model_path": "src/doc_classification/models",
+    "model_object": null,
+    "is_default": true,
+    "is_root": false,
+    "version": 0.01,
+    "description": "This is L2 Classifier",
+    "creation_date": "03:14:06.609540 - Jan 10 2020",
+    "update_date": "03:14:06.609545 - Jan 10 2020",
+    "evaluation": null,
+    "data_path": "data",
+    "data_file_name": "DBPEDIA_train.csv",
+    "other_details": {
+      "para2Vec_path": "src/para2vec/models",
+      "para2vec_file_name": "dbpedia_para2vec_model.pickle"
+    },
+    "child": {
+      "sub_classifiers": [
+        {
+          "model_name": "L3_Building",
+          "version": 0.01
+        },
+        {
+          "model_name": "L3_CelestialBody",
+          "version": 0.01
+        },
+        {
+          "model_name": "L3_Infrastructure",
+          "version": 0.01
+        },
+        {
+          "model_name": "L3_NaturalPlace",
+          "version": 0.01
+        },
+        {
+          "model_name": "L3_RouteOfTransportation",
+          "version": 0.01
+        },
+        {
+          "model_name": "L3_Settlement",
+          "version": 0.01
+        },
+        {
+          "model_name": "L3_SportFacility",
+          "version": 0.01
+        },
+        {
+          "model_name": "L3_Stream",
+          "version": 0.01
+        }
+      ],
+      "lables": [
+        "RollerCoaster",
+        "Lake",
+        "Diocese",
+        "Racecourse",
+        "ArtificialSatellite",
+        "RailwayStation",
+        "Lighthouse",
+        "Theatre"
+      ]
+    }
+  },
+  {
+    "model_name": "L3_Animal",
+    "model_uuid": 149492120728737519968701359105866168538,
+    "model_path": "src/doc_classification/models",
+    "model_object": null,
+    "is_default": true,
+    "is_root": false,
+    "version": 0.01,
+    "description": "This is L3 Classifier",
+    "creation_date": "03:14:06.609697 - Jan 10 2020",
+    "update_date": "03:14:06.609702 - Jan 10 2020",
+    "evaluation": null,
+    "data_path": "data",
+    "data_file_name": "DBPEDIA_train.csv",
+    "other_details": {
+      "para2Vec_path": "src/para2vec/models",
+      "para2vec_file_name": "dbpedia_para2vec_model.pickle"
+    },
+    "child": {
+      "sub_classifiers": [],
+      "lables": [
+        "Amphibian",
+        "Arachnid",
+        "Bird",
+        "Crustacean",
+        "Fish",
+        "Insect",
+        "Mollusca",
+        "Reptile"
+      ]
+    }
+  },
+  {
+    "model_name": "L3_Plant",
+    "model_uuid": 9426146640261664374098650676760969715,
+    "model_path": "src/doc_classification/models",
+    "model_object": null,
+    "is_default": true,
+    "is_root": false,
+    "version": 0.01,
+    "description": "This is L3 Classifier",
+    "creation_date": "03:14:06.609713 - Jan 10 2020",
+    "update_date": "03:14:06.609718 - Jan 10 2020",
+    "evaluation": null,
+    "data_path": "data",
+    "data_file_name": "DBPEDIA_train.csv",
+    "other_details": {
+      "para2Vec_path": "src/para2vec/models",
+      "para2vec_file_name": "dbpedia_para2vec_model.pickle"
+    },
+    "child": {
+      "sub_classifiers": [],
+      "lables": [
+        "Conifer",
+        "CultivatedVariety",
+        "Cycad",
+        "Fern",
+        "GreenAlga",
+        "Moss"
+      ]
+    }
+  },
+  {
+    "model_name": "L2_Species",
+    "model_uuid": 36056841051483515129476064169178743699,
+    "model_path": "src/doc_classification/models",
+    "model_object": null,
+    "is_default": true,
+    "is_root": false,
+    "version": 0.01,
+    "description": "This is L2 Classifier",
+    "creation_date": "03:14:06.609682 - Jan 10 2020",
+    "update_date": "03:14:06.609687 - Jan 10 2020",
+    "evaluation": null,
+    "data_path": "data",
+    "data_file_name": "DBPEDIA_train.csv",
+    "other_details": {
+      "para2Vec_path": "src/para2vec/models",
+      "para2vec_file_name": "dbpedia_para2vec_model.pickle"
+    },
+    "child": {
+      "sub_classifiers": [
+        {
+          "model_name": "L3_Animal",
+          "version": 0.01
+        },
+        {
+          "model_name": "L3_Plant",
+          "version": 0.01
+        }
+      ],
+      "lables": [
+        "Fungus",
+        "Grape",
+        "RaceHorse"
+      ]
+    }
+  },
+  {
+    "model_name": "L3_SportsTeamSeason",
+    "model_uuid": 204224753330890878766687543858604030911,
+    "model_path": "src/doc_classification/models",
+    "model_object": null,
+    "is_default": true,
+    "is_root": false,
+    "version": 0.01,
+    "description": "This is L3 Classifier",
+    "creation_date": "03:14:06.609745 - Jan 10 2020",
+    "update_date": "03:14:06.609749 - Jan 10 2020",
+    "evaluation": null,
+    "data_path": "data",
+    "data_file_name": "DBPEDIA_train.csv",
+    "other_details": {
+      "para2Vec_path": "src/para2vec/models",
+      "para2vec_file_name": "dbpedia_para2vec_model.pickle"
+    },
+    "child": {
+      "sub_classifiers": [],
+      "lables": [
+        "BaseballSeason",
+        "NCAATeamSeason",
+        "SoccerClubSeason"
+      ]
+    }
+  },
+  {
+    "model_name": "L3_Cartoon",
+    "model_uuid": 164353798165444804213970327409223155441,
+    "model_path": "src/doc_classification/models",
+    "model_object": null,
+    "is_default": true,
+    "is_root": false,
+    "version": 0.01,
+    "description": "This is L3 Classifier",
+    "creation_date": "03:14:06.609809 - Jan 10 2020",
+    "update_date": "03:14:06.609814 - Jan 10 2020",
+    "evaluation": null,
+    "data_path": "data",
+    "data_file_name": "DBPEDIA_train.csv",
+    "other_details": {
+      "para2Vec_path": "src/para2vec/models",
+      "para2vec_file_name": "dbpedia_para2vec_model.pickle"
+    },
+    "child": {
+      "sub_classifiers": [],
+      "lables": [
+        "Anime",
+        "HollywoodCartoon"
+      ]
+    }
+  },
+  {
+    "model_name": "L3_Comic",
+    "model_uuid": 146152963996646028788113130489080122924,
+    "model_path": "src/doc_classification/models",
+    "model_object": null,
+    "is_default": true,
+    "is_root": false,
+    "version": 0.01,
+    "description": "This is L3 Classifier",
+    "creation_date": "03:14:06.609824 - Jan 10 2020",
+    "update_date": "03:14:06.609829 - Jan 10 2020",
+    "evaluation": null,
+    "data_path": "data",
+    "data_file_name": "DBPEDIA_train.csv",
+    "other_details": {
+      "para2Vec_path": "src/para2vec/models",
+      "para2vec_file_name": "dbpedia_para2vec_model.pickle"
+    },
+    "child": {
+      "sub_classifiers": [],
+      "lables": [
+        "ComicStrip",
+        "Manga"
+      ]
+    }
+  },
+  {
+    "model_name": "L3_MusicalWork",
+    "model_uuid": 133505749120374591179389445073000123296,
+    "model_path": "src/doc_classification/models",
+    "model_object": null,
+    "is_default": true,
+    "is_root": false,
+    "version": 0.01,
+    "description": "This is L3 Classifier",
+    "creation_date": "03:14:06.609840 - Jan 10 2020",
+    "update_date": "03:14:06.609844 - Jan 10 2020",
+    "evaluation": null,
+    "data_path": "data",
+    "data_file_name": "DBPEDIA_train.csv",
+    "other_details": {
+      "para2Vec_path": "src/para2vec/models",
+      "para2vec_file_name": "dbpedia_para2vec_model.pickle"
+    },
+    "child": {
+      "sub_classifiers": [],
+      "lables": [
+        "Album",
+        "ArtistDiscography",
+        "ClassicalMusicComposition",
+        "Musical",
+        "Single"
+      ]
+    }
+  },
+  {
+    "model_name": "L3_PeriodicalLiterature",
+    "model_uuid": 153578970183770276711383904957107128727,
+    "model_path": "src/doc_classification/models",
+    "model_object": null,
+    "is_default": true,
+    "is_root": false,
+    "version": 0.01,
+    "description": "This is L3 Classifier",
+    "creation_date": "03:14:06.609855 - Jan 10 2020",
+    "update_date": "03:14:06.609859 - Jan 10 2020",
+    "evaluation": null,
+    "data_path": "data",
+    "data_file_name": "DBPEDIA_train.csv",
+    "other_details": {
+      "para2Vec_path": "src/para2vec/models",
+      "para2vec_file_name": "dbpedia_para2vec_model.pickle"
+    },
+    "child": {
+      "sub_classifiers": [],
+      "lables": [
+        "AcademicJournal",
+        "Magazine",
+        "Newspaper"
+      ]
+    }
+  },
+  {
+    "model_name": "L3_WrittenWork",
+    "model_uuid": 122277948517490404351083763570887399303,
+    "model_path": "src/doc_classification/models",
+    "model_object": null,
+    "is_default": true,
+    "is_root": false,
+    "version": 0.01,
+    "description": "This is L3 Classifier",
+    "creation_date": "03:14:06.609870 - Jan 10 2020",
+    "update_date": "03:14:06.609874 - Jan 10 2020",
+    "evaluation": null,
+    "data_path": "data",
+    "data_file_name": "DBPEDIA_train.csv",
+    "other_details": {
+      "para2Vec_path": "src/para2vec/models",
+      "para2vec_file_name": "dbpedia_para2vec_model.pickle"
+    },
+    "child": {
+      "sub_classifiers": [],
+      "lables": [
+        "Play",
+        "Poem"
+      ]
+    }
+  },
+  {
+    "model_name": "L2_Work",
+    "model_uuid": 55758331853213645201268798979673420916,
+    "model_path": "src/doc_classification/models",
+    "model_object": null,
+    "is_default": true,
+    "is_root": false,
+    "version": 0.01,
+    "description": "This is L2 Classifier",
+    "creation_date": "03:14:06.609794 - Jan 10 2020",
+    "update_date": "03:14:06.609799 - Jan 10 2020",
+    "evaluation": null,
+    "data_path": "data",
+    "data_file_name": "DBPEDIA_train.csv",
+    "other_details": {
+      "para2Vec_path": "src/para2vec/models",
+      "para2vec_file_name": "dbpedia_para2vec_model.pickle"
+    },
+    "child": {
+      "sub_classifiers": [
+        {
+          "model_name": "L3_Cartoon",
+          "version": 0.01
+        },
+        {
+          "model_name": "L3_Comic",
+          "version": 0.01
+        },
+        {
+          "model_name": "L3_MusicalWork",
+          "version": 0.01
+        },
+        {
+          "model_name": "L3_PeriodicalLiterature",
+          "version": 0.01
+        },
+        {
+          "model_name": "L3_WrittenWork",
+          "version": 0.01
+        }
+      ],
+      "lables": [
+        "BiologicalDatabase",
+        "VideoGame",
+        "EurovisionSongContestEntry"
+      ]
+    }
+  },
+  {
+    "model_name": "L1",
+    "model_uuid": 174068962857033577500714059914211846358,
+    "model_path": "src/doc_classification/models",
+    "model_object": null,
+    "is_default": true,
+    "is_root": true,
+    "version": 0.01,
+    "description": "This is L1 Classifier",
+    "creation_date": "03:14:06.608948 - Jan 10 2020",
+    "update_date": "03:14:06.608986 - Jan 10 2020",
+    "evaluation": null,
+    "data_path": "data",
+    "data_file_name": "DBPEDIA_train.csv",
+    "other_details": {
+      "para2Vec_path": "src/para2vec/models",
+      "para2vec_file_name": "dbpedia_para2vec_model.pickle"
+    },
+    "child": {
+      "sub_classifiers": [
+        {
+          "model_name": "L2_Agent",
+          "version": 0.01
+        },
+        {
+          "model_name": "L2_Event",
+          "version": 0.01
+        },
+        {
+          "model_name": "L2_Place",
+          "version": 0.01
+        },
+        {
+          "model_name": "L2_Species",
+          "version": 0.01
+        },
+        {
+          "model_name": "L2_Work",
+          "version": 0.01
+        }
+      ],
+      "lables": [
+        "AutomobileEngine",
+        "NationalFootballLeagueSeason",
+        "MusicGenre",
+        "SupremeCourtOfTheUnitedStatesCase"
+      ]
+    }
+  }
+]

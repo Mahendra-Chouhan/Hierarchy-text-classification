@@ -12,7 +12,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
 from sklearn import svm
 from sklearn.metrics import accuracy_score
-
+import uuid
 
 class l1_classification(text_classification):
     def __init__(self, logger=None):
@@ -25,6 +25,7 @@ class l1_classification(text_classification):
         self.version = version
         classifier_details = text_classification.get_detault_detail(self)
         classifier_details["model_name"] = self.model_name
+        classifier_details["model_uuid"] = uuid.uuid4().int
         classifier_details["model_path"] = self.model_path
         classifier_details["version"] = self.version
         classifier_details["description"] = """This is L1 Classifier"""
@@ -47,7 +48,7 @@ class l1_classification(text_classification):
         return True, evaluation
 
     def train_classification(self, features, lables):
-        logreg = svm.SVC()
+        logreg = LogisticRegression()
         logreg.fit(features, lables)
         return logreg
 

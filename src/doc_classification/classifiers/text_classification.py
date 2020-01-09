@@ -30,6 +30,7 @@ class text_classification():
     def get_detault_detail(self):
         classifier_details = {}
         classifier_details["model_name"] = None
+        classifier_details["model_uuid"] = None
         classifier_details["model_path"] = None
         classifier_details["model_object"] = None
         classifier_details["is_default"] = True
